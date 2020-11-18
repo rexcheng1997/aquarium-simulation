@@ -1,0 +1,45 @@
+{
+  "name": "aquarium-simulation",
+  "version": "1.0.0",
+  "description": "A simulation of real-world aquarium with environment and flocking behavior.",
+  "scripts": {
+    "build": "webpack --config webpack.dev.js; mv public/index.html ./",
+    "build:prod": "webpack --config webpack.prod.js; mv public/index.html ./",
+    "start": "webpack serve --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexcheng1997/aquarium-simulation.git"
+  },
+  "keywords": [
+    "aquarium",
+    "flocking",
+    "simulation",
+    "pixi.js"
+  ],
+  "author": "Junyi Cheng <junyi-cheng@berkeley.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexcheng1997/aquarium-simulation/issues"
+  },
+  "homepage": "https://rexcheng1997.github.io/aquarium-simulation",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.5.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "pixi.js": "^5.3.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
