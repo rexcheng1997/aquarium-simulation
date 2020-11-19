@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import * as PIXI from 'pixi.js';
+import GiantFish from './class.GiantFish';
 import FishSchool from './class.FishSchool';
 
 export default function Aquarium(props) {
@@ -36,7 +37,15 @@ export default function Aquarium(props) {
 
         // give me fish!
         const fishSchools = [];
+        fishSchools.push(new FishSchool(props.resources.fish1.texture, 30, [2, 3], 30, 1));
+        fishSchools.push(new FishSchool(props.resources.fish4.texture, 50, [2, 3], 15, 2));
         fishSchools.push(new FishSchool(props.resources.fish6.texture, 20, [1, 2], 50, 0));
+        for (let i = 0; i < 5; i++) {
+            fishSchools.push(new GiantFish(props.resources.fish3.texture, 100, [1, 2], 3));
+        }
+        for (let i = 0; i < 2; i++) {
+            fishSchools.push(new GiantFish(props.resources.fish5.texture, 200, [0.6, 1.2], 4));
+        }
         for (const school of fishSchools) {
             app.stage.addChild(school.getRenderableObject());
         }
