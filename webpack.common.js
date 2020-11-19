@@ -15,6 +15,7 @@ module.exports = {
         filename: 'index.html',
         publicPath: './public',
         template: 'template.html',
+        favicon: 'favicon.ico',
         meta: {
             'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
             'description': 'A simulation of real-world aquarium with environment and flocking behavior.',
