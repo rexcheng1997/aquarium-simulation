@@ -2,7 +2,7 @@ import '../public/stylesheets/global.css';
 
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import Aquarium from './components/aquarium';
+import Aquarium from './component.Aquarium';
 
 import anime from 'animejs';
 import * as PIXI from 'pixi.js';

@@ -105,3 +105,6 @@ dist
 
 # assets
 assets/sprites/fishes/*.original.*
+
+# license
+public/*.LICENSE.txt
