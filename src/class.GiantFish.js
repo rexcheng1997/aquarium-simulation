@@ -7,6 +7,7 @@ export default class GiantFish extends Fish {
         const x = Math.floor(Math.random() * window.innerWidth);
         const y = Math.floor(Math.random() * window.innerHeight);
         super(texture, width, velocity, x, y);
+        this.maxWidth = width;
         this.maxForce = 0.1;
         this.container = new PIXI.Container();
         this.container.zIndex = layer;
@@ -22,7 +23,7 @@ export default class GiantFish extends Fish {
         this.ax = (Math.random() < 0.5 ? -1 : 1) * Math.random() * this.minSpeed;
         this.ay = (Math.random() < 0.5 ? -1 : 1) * Math.random() * this.minSpeed;
         this.counter = 1;
-        this.step = this.sprite.width + Math.floor(2 * Math.random() * this.sprite.width);
+        this.step = this.maxWidth + Math.floor(2 * Math.random() * this.maxWidth);
     }
 
     snapshot() {
@@ -40,6 +41,13 @@ export default class GiantFish extends Fish {
 
     update() {
         this.snapshot();
+        if (this.sprite.width > this.maxWidth / 2 && this.sprite.y < window.innerHeight / 2 && (this.sprite.x < window.innerWidth / 2 && this.buffer.velocity.x > 0) || (this.sprite.x > window.innerWidth / 2 && this.buffer.velocity.x < 0)) {
+            this.sprite.width -= 0.2;
+            this.sprite.height = this.sprite.width * 0.75;
+        } else if (this.sprite.width < this.maxWidth) {
+            this.sprite.width += 0.2;
+            this.sprite.height = this.sprite.width * 0.75;
+        }
         super.update();
     }
 };

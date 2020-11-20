@@ -6,18 +6,7 @@ import Aquarium from './component.Aquarium';
 
 import anime from 'animejs';
 import * as PIXI from 'pixi.js';
-
-const SPRITES = {
-    bg: window.innerWidth > window.innerHeight ? 'assets/bg-landscape.jpg' : 'assets/bg-portrait.jpg',
-    bgDepthMap: window.innerWidth > window.innerHeight ? 'assets/bg-landscape.dm.png' : 'assets/bg-portrait.dm.png',
-    bgFilter: 'assets/filter.jpg',
-    fish1: 'assets/sprites/fishes/fish1.png',
-    fish2: 'assets/sprites/fishes/fish2.png',
-    fish3: 'assets/sprites/fishes/fish3.png',
-    fish4: 'assets/sprites/fishes/fish4.png',
-    fish5: 'assets/sprites/fishes/fish5.png',
-    fish6: 'assets/sprites/fishes/fish6.png'
-};
+import { SPRITES } from './utils.SPRITES';
 
 function App() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -67,7 +56,7 @@ function Loader(props) {
     }, []);
 
     return (
-        <div className='background' style={{ backgroundImage: `url('assets/bg-${orientation}.jpg')` }}>
+        <div className='background' style={{ backgroundImage: `url('assets/bg1-${orientation}.jpg')` }}>
             <div className='loader'>
                 <div>
                     {letters.map((l, i) => <span key={i} className='letter'>{l}</span>)}

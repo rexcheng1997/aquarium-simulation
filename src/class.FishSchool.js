@@ -7,18 +7,27 @@ export default class FishSchool {
         this.fishes = [];
         this.container = new PIXI.Container();
         this.container.zIndex = layer;
-        for (let i = 0; i < number; i++) {
-            const x = Math.floor(Math.random() * window.innerWidth);
-            const y = Math.floor(Math.random() * window.innerHeight);
-            this.fishes.push(new Fish(texture, width, velocity, x, y));
-            this.container.addChild(this.fishes[i].getRenderableObject());
-        }
+        this._addFish = (fishes, container) => {
+            for (let i = 0; i < number; i++) {
+                const x = Math.floor(Math.random() * window.innerWidth);
+                const y = Math.floor(Math.random() * window.innerHeight);
+                const fish = new Fish(texture, width, velocity, x, y);
+                fishes.push(fish);
+                container.addChild(fish.getRenderableObject());
+            }
+        };
+        this._addFish(this.fishes, this.container);
         this.perception = width * 10;
         this.qt = undefined;
     }
 
     getRenderableObject() {
         return this.container;
+    }
+
+    addFish() {
+        this._addFish(this.fishes, this.container);
+        return this;
     }
 
     buildQuadTree() {

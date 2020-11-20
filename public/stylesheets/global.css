@@ -39,3 +39,117 @@ html, body {
 .loader span.letter {
     margin-right: 5px;
 }
+
+.info-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 10;
+}
+.icon-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+.icon-wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.menu {
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    padding: 0 1rem;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 0.6s ease;
+}
+.sub-menu {
+    width: 100%;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sub-menu .option {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.6s ease;
+}
+.sub-menu .option:hover {
+    color: #006ED8;
+}
+.sub-menu .option:first-child {
+    padding-top: 1rem;
+}
+.sub-menu .option:last-child {
+    padding-bottom: 1rem;
+}
+.sub-menu .option.align-left {
+    text-align: left;
+}
+.sub-menu .option img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.sub-menu .option.fish img {
+    width: 50%;
+    margin: 0 auto;
+    transition: all 0.6s ease;
+}
+.sub-menu .option.fish img:hover {
+    transform: scale(1.1);
+}
+.scroll-container {
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+.scroll-container::-webkit-scrollbar {
+    width: 5px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+    transition: background-color 0.6s ease;
+}
+.scroll-container::-webkit-scrollbar-thumb:active {
+    background-color: #848484;
+}
+
+.menu-primary-enter {
+    position: absolute;
+    transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+    transform: translateX(0);
+    transition: all 0.6s ease;
+}
+.menu-primary-exit {
+    position: absolute;
+}
+.menu-primary-exit-active {
+    transform: translateX(-110%);
+    transition: all 0.6s ease;
+}
+.menu-secondary-enter {
+    transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+    transform: translateX(0);
+    transition: all 0.6s ease;
+}
+.menu-secondary-exit-active {
+    transform: translateX(110%);
+    transition: all 0.6s ease;
+}
