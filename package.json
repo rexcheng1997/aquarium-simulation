@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "A simulation of real-world aquarium with environment and flocking behavior.",
   "scripts": {
-    "build": "webpack --config webpack.dev.js; mv public/index.html ./",
-    "build:prod": "webpack --config webpack.prod.js; mv public/index.html ./",
+    "build": "webpack --config webpack.prod.js; mv public/index.html ./",
     "start": "webpack serve --config webpack.dev.js"
   },
   "repository": {

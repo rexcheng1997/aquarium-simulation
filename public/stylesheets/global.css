@@ -66,7 +66,7 @@ html, body {
     position: absolute;
     top: 60px;
     right: 1rem;
-    padding: 0 1rem;
+    padding: 10px 1rem;
     background-color: white;
     border-radius: 5px;
     overflow: hidden;
@@ -89,12 +89,6 @@ html, body {
 .sub-menu .option:hover {
     color: #006ED8;
 }
-.sub-menu .option:first-child {
-    padding-top: 1rem;
-}
-.sub-menu .option:last-child {
-    padding-bottom: 1rem;
-}
 .sub-menu .option.align-left {
     text-align: left;
 }
@@ -113,7 +107,7 @@ html, body {
 }
 .scroll-container {
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .scroll-container::-webkit-scrollbar {
     width: 5px;

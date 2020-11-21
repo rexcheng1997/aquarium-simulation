@@ -195,7 +195,7 @@ function Menu(props) {
     }
 
     return (
-        <div className='menu' style={{ height: menuHeight }} ref={menuRef}>
+        <div className='menu' style={{ height: menuHeight + 20 }} ref={menuRef}>
             <CSSTransition in={activeMenu === 'main'}
                 timeout={6e2}
                 classNames='menu-primary'
